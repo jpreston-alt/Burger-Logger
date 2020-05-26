@@ -29,6 +29,7 @@ const orm = {
     }
 };
 
+// TEST ORM
 // orm.selectAll("burgers", function(result) {
 //     console.log(result);
 // });
