@@ -3,13 +3,12 @@ const burger = require("../models/burger");
 
 const router = express.Router();
 
-var connection = require("../config/connection");
-
 // GET ROUTE
 router.get("/", function(req, res) {
-    // console.log("connected!");
-    burger.selectAll(result => {
-        console.table(result);
+    burger.selectAll(data => {
+        let burgers = { burgerInst: data};
+        // console.log(burgers);
+        res.render("index", burgers);
     });
 });
 

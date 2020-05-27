@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Eat-Da-Burger</h1>
+        <p class="lead">Information about the app goes here</p>
+        <hr class="my-4">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Submit new Burger Here" aria-label="new burger"
+                    aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+                </div>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card text-center" style="">
+                <div class="card-header">
+                    <h3 class="card-title">Eat-Da-Burger</h3>
+                    {{!-- <h6 class="card-subtitle mb-2 text-muted">Click to Devour</h6> --}}
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {{#each burgerInst}}
+                        {{#unless devoured}}
+                        <li class="list-group-item">
+                            {{burger_name}}
+                            {{!-- <button>Devour!</button> --}}
+                        </li>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card text-center" style="">
+                <div class="card-header">
+                    <h3 class="card-title">Burgers Devoured</h3>
+                    {{!-- <h6 class="card-subtitle mb-2 text-muted">Click to Devour</h6> --}}
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {{#each burgerInst}}
+                        {{#if devoured}}
+                        <li class="list-group-item">
+                            {{burger_name}}
+                            {{!-- <button>Devour!</button> --}}
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
