@@ -13,9 +13,11 @@ router.get("/", function(req, res) {
 });
 
 // INSERT ROUTE
-// router.post("/api/burgers", function(req, res) {
-
-// });
+router.post("/api/burgers", function(req, res) {
+    burger.insertOne(req.body.burger_name, result => {
+        res.json({ id: result.insertId });
+    });
+});
 
 // UPDATE ROUTE
 // router.put("/api/burgers/:id", function (req, res) {
