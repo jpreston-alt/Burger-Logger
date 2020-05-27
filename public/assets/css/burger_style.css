@@ -1,0 +1,9 @@
+.devour-btn {
+    background: none;
+    border: none;
+    height: 50%;
+}
+
+.devour-item:hover {
+    background-color: rgb(228, 228, 228);
+}

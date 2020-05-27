@@ -17,5 +17,18 @@ $(function () {
         });
     });
 
+    // devour burger button - switches devoured value to true
+    $(".devour-btn").on("click", function(event) {
+        event.preventDefault();
 
+        let id = $(this).data("burgerid");
+
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT"
+        }).then(function() {
+            console.log("burger devoured!");
+            location.reload();
+        });
+    });
+    
 });

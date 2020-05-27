@@ -21,8 +21,8 @@ let burger = {
     },
 
     // update devoured column to eaten -> default (false) to true
-    updateDevoured: function(eatenBoolean, burgerName, cb) {
-        orm.updateOne("burgers", "devoured", eatenBoolean, "burger_name", burgerName, cb, function(res) {
+    updateDevoured: function(eatenBoolean, burgerID, cb) {
+        orm.updateOne("burgers", "devoured", eatenBoolean, "id", burgerID, cb, function(res) {
             cb(res);
         });
     }

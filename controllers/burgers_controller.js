@@ -20,8 +20,12 @@ router.post("/api/burgers", function(req, res) {
 });
 
 // UPDATE ROUTE
-// router.put("/api/burgers/:id", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
+    let burgerID = req.params.id;
 
-// });
+    burger.updateDevoured(true, burgerID, result => {
+        res.json({ id: result.insertId });
+    });
+});
 
 module.exports = router;

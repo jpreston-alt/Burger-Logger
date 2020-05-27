@@ -17,15 +17,14 @@
             <div class="card text-center" style="">
                 <div class="card-header">
                     <h3 class="card-title">Eat-Da-Burger</h3>
-                    {{!-- <h6 class="card-subtitle mb-2 text-muted">Click to Devour</h6> --}}
+                    <h6 class="card-subtitle mb-2 text-muted">Click to Devour</h6>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         {{#each burgerInst}}
                         {{#unless devoured}}
-                        <li class="list-group-item" data-burgerID="{{id}}">
-                            {{burger_name}}
-                            {{!-- <button>Devour!</button> --}}
+                        <li class="list-group-item devour-item">
+                            <button class="devour-btn" data-burgerID="{{id}}" style="width: 100%;">{{burger_name}}</button>
                         </li>
                         {{/unless}}
                         {{/each}}
@@ -38,7 +37,7 @@
             <div class="card text-center" style="">
                 <div class="card-header">
                     <h3 class="card-title">Burgers Devoured</h3>
-                    {{!-- <h6 class="card-subtitle mb-2 text-muted">Click to Devour</h6> --}}
+                    <h6 class="card-subtitle mb-2 text-muted">Click to Delete</h6>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
