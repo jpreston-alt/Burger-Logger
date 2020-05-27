@@ -2,7 +2,8 @@
 var mysql = require("mysql");
 
 // import login information from .env file
-require('dotenv').config({ path: '../.env' });
+// require('dotenv').config({ path: '../.env' });
+require('dotenv').config();
 
 var connection = mysql.createConnection({
     host: process.env.MYSQL_HOST,
@@ -14,10 +15,13 @@ var connection = mysql.createConnection({
 
 // Make mysql connection
 connection.connect(function (err) {
+    // console.log(connection);
+
     if (err) {
         console.error("error connecting: " + err.stack);
         return;
     }
+
     console.log("connected as id " + connection.threadId);
 });
 

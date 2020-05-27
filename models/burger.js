@@ -1,6 +1,7 @@
 // require orm object
 const orm = require("../config/orm");
 
+
 // set up burger object using orm methods specific to burger object. sets up methods to interact with the database.
 
 let burger = {
