@@ -1,22 +1,23 @@
-<div class="container">
-
-    <div class="jumbotron text-center">
-        <h1 class="display-4">Eat-Da-Burger</h1>
-        <p class="lead">Information about the app goes here</p>
-        <hr class="my-4">
-        <div class="input-group mb-3" id="new-burger-form">
-            <input type="text" class="form-control" placeholder="Submit new Burger Here" id="input-burger-name">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="submit-burger-btn">Submit</button>
+<div id="pic-section">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <div class="jumbotron text-center">
+                <h1 class="display-4">Eat-Da-Burger.</h1>
+                <a href="#new-burger-form"><button class="action-btn">Add to Menu</button></a>
+                <a href="#menu"><button class="action-btn">View Menu</button></a>
+                <a href="#devoured-list"><button class="action-btn">Rate Tastiness</button></a>
             </div>
         </div>
     </div>
+</div>
 
+
+<div class="container">
     <div class="row">
         <div class="col-12 col-md-6">
-            <div class="card text-center" style="">
+            <div class="card text-center" id="menu">
                 <div class="card-header">
-                    <h3 class="card-title">Eat-Da-Burger</h3>
+                    <h3 class="card-title">Menu</h3>
                     <h6 class="card-subtitle mb-2 text-muted">Click to Devour</h6>
                 </div>
                 <div class="card-body">
@@ -34,7 +35,7 @@
         </div>
 
         <div class="col-12 col-md-6">
-            <div class="card text-center" style="">
+            <div class="card text-center" id="devoured-list">
                 <div class="card-header">
                     <h3 class="card-title">Burgers Devoured</h3>
                     <h6 class="card-subtitle mb-2 text-muted">Click to Delete</h6>
@@ -45,7 +46,6 @@
                         {{#if devoured}}
                         <li class="list-group-item" data-burgerID="{{id}}">
                             {{burger_name}}
-                            {{!-- <button>Devour!</button> --}}
                         </li>
                         {{/if}}
                         {{/each}}
@@ -54,7 +54,30 @@
             </div>
         </div>
     </div>
-
+    <div class="row add-row">
+        <div class="col-12">
+            <div class="card text-center" id="add-burger-card">
+                <div class="card-header">
+                    <h3 class="card-title">Add Burger to Menu</h3>
+                </div>
+                <div class="card-body">
+                    <div class="text-center" id="new-burger-form">
+                        <textarea type="text" rows="6" class="form-control" placeholder="ex. Impossible Burger" id="input-burger-name"></textarea>
+                        <button class="btn btn-outline-secondary" type="button" id="submit-burger-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<footer>
+    <div class="container text-center" style="padding-top: 15px;">
+        <p>Copyright @ Joanna Preston</p>
+    </div>
+</footer>
+
+
+
 
 

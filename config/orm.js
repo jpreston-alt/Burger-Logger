@@ -29,19 +29,6 @@ const orm = {
     }
 };
 
-// TEST ORM
-// orm.selectAll("burgers", function(result) {
-//     console.log(result);
-// });
-
-// orm.insertOne("burgers", "burger_name", "Bacon Burger", function(result) {
-//     console.log(result);
-// });
-
-// orm.updateOne("burgers", "devoured", true, "burger_name", "Impossible Burger", function(result) {
-//     console.log(result);
-// });
-
 // export orm
 module.exports = orm;
 

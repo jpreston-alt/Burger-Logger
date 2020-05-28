@@ -7,7 +7,6 @@ const router = express.Router();
 router.get("/", function(req, res) {
     burger.selectAll(data => {
         let burgers = { burgerInst: data};
-        // console.log(burgers);
         res.render("index", burgers);
     });
 });

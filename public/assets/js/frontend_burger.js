@@ -8,6 +8,7 @@ $(function () {
             burger_name: $("#input-burger-name").val().trim()
         };
 
+
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
@@ -17,7 +18,7 @@ $(function () {
         });
     });
 
-    // devour burger button - switches devoured value to true
+    // devour burger button - updates devoured value to true
     $(".devour-btn").on("click", function(event) {
         event.preventDefault();
 
@@ -30,5 +31,5 @@ $(function () {
             location.reload();
         });
     });
-    
+
 });

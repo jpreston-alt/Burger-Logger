@@ -30,27 +30,3 @@ let burger = {
 
 // export burger object and methods
 module.exports = burger;
-
-
-
-
-// TEST BURGER METHODS
-
-// burger.insertOne("Egg Burger", function(result) {
-//     console.log(result);
-//     burger.selectAll(res => {
-//         console.table(res);
-//     });
-// });
-
-// burger.updateDevoured(true, "Egg Burger", result => {
-//     console.log(result);
-//     burger.selectAll(res => {
-//         console.table(res);
-//     });
-// });
-
-// burger.selectAll(result => {
-//     console.table(result);
-// });
-

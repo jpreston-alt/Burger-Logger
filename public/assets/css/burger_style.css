@@ -1,3 +1,16 @@
+body, html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#pic-section {
+    background-image: url("../images/wood.jpg");
+    background-image: url("../images/burger1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 750px;
+}
+
 .devour-btn {
     background: none;
     border: none;
@@ -5,5 +18,96 @@
 }
 
 .devour-item:hover {
-    background-color: rgb(228, 228, 228);
+    background-color: #fda95b59;
+}
+
+.card {
+    margin-top: 40px;
+    border: 1px solid #fda95b;
+    margin-bottom: 40px;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid #fda95b;
+}
+
+.jumbotron {
+    background: none;
+    padding-top: 100px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: white;
+}
+
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    color: #294651;
+    
+}
+
+h6 {
+    text-transform: uppercase;
+}
+
+.action-btn {
+  border-radius: 25px;
+  padding: 10px 25px 10px 25px;
+  font-size: 16px;
+  margin: 20px 10px 20px 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+  background: none;
+  color: #fda95b;
+  border: 1px solid #fda95b;
+}
+
+.action-btn:hover {
+    background-color: #fda95b;
+    color: white;
+}
+
+#new-burger-form {
+    width: 50%;
+    margin: 40px auto 0px auto;
+}
+
+#submit-burger-btn {
+    border-radius: 25px;
+  padding: 10px 25px 10px 25px;
+  font-size: 16px;
+  margin: 20px 10px 20px 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+  background: #294651;
+  color: white;
+  /* border: 1px solid #294651; */
+}
+
+#submit-burger-btn:hover {
+    font-size: 18px;
+}
+
+.list-group-item {
+    border: 1px solid #fda95b59;
+    color: #294651;
+}
+
+footer {
+    background-color: #fda95b;
+    color: white;
+    height: 70px;
+}
+
+@media only screen and (min-width: 768px) {
+    #devoured-list, #menu {
+        height: 100%;
+    }
+
+    .add-row {
+        margin-top: 40px;
+    }
 }
