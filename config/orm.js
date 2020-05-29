@@ -26,6 +26,13 @@ const orm = {
             if (err) throw err;
             cb(res);
         });
+    },
+
+    deleteOne: function(table, columnName, columnVal, cb) {
+        connection.query('DELETE FROM ?? WHERE ?? = ?;', [table, columnName, columnVal], function(err, res) {
+            if (err) throw err;
+            cb(res);
+        });
     }
 };
 

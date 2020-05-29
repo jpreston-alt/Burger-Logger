@@ -44,8 +44,8 @@
                     <ul class="list-group list-group-flush">
                         {{#each burgerInst}}
                         {{#if devoured}}
-                        <li class="list-group-item" data-burgerID="{{id}}">
-                            {{burger_name}}
+                        <li class="list-group-item devoured-item" data-burgerID="{{id}}">
+                            <button class="delete-btn" data-burgerID="{{id}}" style="width: 100%;">{{burger_name}}</button>
                         </li>
                         {{/if}}
                         {{/each}}

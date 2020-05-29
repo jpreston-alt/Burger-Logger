@@ -23,8 +23,25 @@ router.put("/api/burgers/:id", function (req, res) {
     let burgerID = req.params.id;
 
     burger.updateDevoured(true, burgerID, result => {
-        res.json({ id: result.insertId });
+        if (result.changedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
     });
 });
+
+// DELETE ROUTE
+router.delete("/api/burgers/:id", function (req, res) {
+    let burgerID = req.params.id;
+
+    burger.deleteOne(burgerID, result => {
+        if (result.affectedRows === 0) {
+            return res.status(404).end();
+        }
+        res.status(200).end();
+    });
+});
+
 
 module.exports = router;

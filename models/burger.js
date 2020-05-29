@@ -25,6 +25,12 @@ let burger = {
         orm.updateOne("burgers", "devoured", eatenBoolean, "id", burgerID, cb, function(res) {
             cb(res);
         });
+    },
+
+    deleteOne: function(id, cb) {
+        orm.deleteOne("burgers", "id", id, function(res) {
+            cb(res);
+        });
     }
 };
 

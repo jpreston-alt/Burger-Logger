@@ -11,13 +11,13 @@ body, html {
     height: 750px;
 }
 
-.devour-btn {
+.devour-btn, .delete-btn {
     background: none;
     border: none;
     height: 50%;
 }
 
-.devour-item:hover {
+.devour-item:hover, .devoured-item:hover {
     background-color: #fda95b59;
 }
 
