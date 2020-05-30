@@ -4,17 +4,21 @@ $(function () {
     $("#submit-burger-btn").on("click", function(event) {
         event.preventDefault();
 
-        let newBurger = {
-            burger_name: $("#input-burger-name").val().trim()
-        };
+        if ($("#input-burger-name").val().trim() != "") {
+            let newBurger = {
+                burger_name: $("#input-burger-name").val().trim()
+            };
 
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(function() {
-            console.log("new burger added!");
-            location.reload();
-        });
+            $.ajax("/api/burgers", {
+                type: "POST",
+                data: newBurger
+            }).then(function () {
+                console.log("new burger added!");
+                location.reload();
+            });
+        } else {
+            alert("Please enter valid burger name")
+        }
     });
 
     // devour burger button - updates devoured value to true
