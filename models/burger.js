@@ -27,6 +27,13 @@ let burger = {
         });
     },
 
+    // update stars rating
+    updateRating: function(ratingNum, burgerID, cb) {
+        orm.updateOne("burgers", "rating", ratingNum, "id", burgerID, cb, function(res) {
+            cb(res);
+        });
+    },
+
     deleteOne: function(id, cb) {
         orm.deleteOne("burgers", "id", id, function(res) {
             cb(res);

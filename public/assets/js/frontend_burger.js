@@ -1,4 +1,7 @@
 $(function () {
+
+    // render all stars when page loads
+    renderAllStars();
     
     // submit new burger
     $("#submit-burger-btn").on("click", function(event) {
@@ -26,9 +29,13 @@ $(function () {
         event.preventDefault();
 
         let id = $(this).data("burgerid");
+        let burgerData = {
+            devoured: 1
+        };
 
         $.ajax("/api/burgers/" + id, {
-            type: "PUT"
+            type: "PUT",
+            data: burgerData
         }).then(function() {
             console.log("Burger devoured!");
             location.reload();
@@ -48,5 +55,46 @@ $(function () {
             location.reload();
         });
     });
+
+
+    // stars rating
+    $(".fa-star").on("click", function (event) {
+        event.preventDefault();
+        let ratingNum = $(this).data("rating");
+        let id = $(this).parent().data("burgerid");
+
+        let burgerData = {
+            rating: ratingNum
+        };
+
+        renderStars(id, ratingNum);
+
+        $.ajax("/api/burgers/rating/" + id, {
+            type: "PUT",
+            data: burgerData
+        }).then(function () {
+            location.reload(); 
+        });
+    });
+
+    function renderAllStars() {
+        $.ajax("/api/burgers", {
+            type: "GET",
+        }).then(function(data) {
+            for (var i = 0; i < data.length; i++) {
+                renderStars(data[i].id, data[i].rating);
+            }
+        });
+    };
+
+    // render stars for individual burgers
+    function renderStars(id, ratingNum) {
+        $(`i.burger${id}`).each(function () {
+            $(this).removeClass("checked");
+            if ($(this).data("rating") <= ratingNum) {
+                $(this).addClass("checked");
+            }
+        });
+    };
 
 });

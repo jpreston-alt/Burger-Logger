@@ -45,7 +45,20 @@
                         {{#each burgerInst}}
                         {{#if devoured}}
                         <li class="list-group-item devoured-item" data-burgerID="{{id}}">
-                            <button class="delete-btn" data-burgerID="{{id}}" style="width: 100%;">{{burger_name}}</button>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="delete-btn" data-burgerID="{{id}}" style="">
+                                        {{burger_name}}
+                                    </button>
+                                </div>
+                                <div class="col stars-rating" data-burgerID="{{id}}">
+                                    <i class="fa fa-star burger{{id}}" data-rating="1"></i>
+                                    <i class="fa fa-star burger{{id}}" data-rating="2"></i>
+                                    <i class="fa fa-star burger{{id}}" data-rating="3"></i>
+                                    <i class="fa fa-star burger{{id}}" data-rating="4"></i>
+                                    <i class="fa fa-star burger{{id}}" data-rating="5"></i>
+                                </div>
+                            </div>
                         </li>
                         {{/if}}
                         {{/each}}

@@ -102,6 +102,21 @@ footer {
     height: 70px;
 }
 
+/* stars rating */
+    .fa-star {
+        color: gray;
+        border: none;
+        padding: none;
+    }
+
+    .fa-star:hover {
+        color: orange;
+    }
+
+    .checked {
+        color: orange;
+    }
+
 @media only screen and (min-width: 768px) {
     #devoured-list, #menu {
         height: 100%;
