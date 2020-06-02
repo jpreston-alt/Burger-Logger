@@ -43,7 +43,7 @@ Building this application taught me about how working with the MVC design patter
 
 
 ## Finished Product
-View deployed Heroku app [here](https://jp-burger-logger.herokuapp.com//). <br>
+View deployed Heroku app [here](https://jp-burger-logger.herokuapp.com/). <br>
 View application through my portfolio page [here](https://jpreston-alt.github.io/Portfolio/portfolio.html).
 
 ![](./public/assets/images/burger.gif)
