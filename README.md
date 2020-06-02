@@ -10,7 +10,11 @@ Building this application taught me about how working with the MVC design patter
 <br>
 <img src="./public/assets/images/homepage.png" alt="homepage-pic" width="700"/>
 <br>
-<img src="./public/assets/images/menu.png" alt="menu-pic" height="220"/><img src="./public/assets/images/devoured.png" alt="devoured-pic" height="220"/><img src="./public/assets/images/input.png" alt="input-pic" height="220"/>
+<p float="left">
+    <img src="./public/assets/images/menu.png" alt="menu-pic" height="220"/>
+    <img src="./public/assets/images/devoured.png" alt="devoured-pic" height="220"/>
+    <img src="./public/assets/images/input.png" alt="input-pic" height="220"/>
+</p>
 
 ## Table of Contents
 * [Technologies](#technologies)
