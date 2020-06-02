@@ -34,6 +34,7 @@ let burger = {
         });
     },
 
+    // delete burger
     deleteOne: function(id, cb) {
         orm.deleteOne("burgers", "id", id, function(res) {
             cb(res);

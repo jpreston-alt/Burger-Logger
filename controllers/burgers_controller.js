@@ -3,13 +3,15 @@ const burger = require("../models/burger");
 
 const router = express.Router();
 
-// GET ROUTE
+// GET ALL BURGERS ROUTE -- html route
 router.get("/", function(req, res) {
     burger.selectAll(data => {
         let burgers = { burgerInst: data};
         res.render("index", burgers);
     });
 });
+
+// API ROUTES //
 
 // GET STARS
 router.get("/api/burgers", function(req, res) {
