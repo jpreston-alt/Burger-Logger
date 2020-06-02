@@ -25,10 +25,9 @@ router.post("/api/burgers", function(req, res) {
     });
 });
 
-// UPDATE ROUTE
+// UPDATE DEVOURED
 router.put("/api/burgers/:id", function (req, res) {
     let burgerID = req.params.id;
-    console.log(req.body);
 
     burger.updateDevoured(req.body.devoured, burgerID, result => {
         if (result.changedRows == 0) {
@@ -39,10 +38,9 @@ router.put("/api/burgers/:id", function (req, res) {
     });
 });
 
-// update stars rating
+// UPDATE STARS RATING
 router.put("/api/burgers/rating/:id", function(req, res) {
     let burgerID = req.params.id;
-    console.log(req.body);
 
     burger.updateRating(req.body.rating, burgerID, result => {
         if (result.changedRows == 0) {

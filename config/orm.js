@@ -28,6 +28,7 @@ const orm = {
         });
     },
 
+    // delete one burger
     deleteOne: function(table, columnName, columnVal, cb) {
         connection.query('DELETE FROM ?? WHERE ?? = ?;', [table, columnName, columnVal], function(err, res) {
             if (err) throw err;

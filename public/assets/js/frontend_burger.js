@@ -7,6 +7,7 @@ $(function () {
     $("#submit-burger-btn").on("click", function(event) {
         event.preventDefault();
 
+        // ensures empty field isn't submitted
         if ($("#input-burger-name").val().trim() != "") {
             let newBurger = {
                 burger_name: $("#input-burger-name").val().trim()
@@ -57,7 +58,7 @@ $(function () {
     });
 
 
-    // stars rating
+    // update stars rating stars rating
     $(".fa-star").on("click", function (event) {
         event.preventDefault();
         let ratingNum = $(this).data("rating");
@@ -67,8 +68,10 @@ $(function () {
             rating: ratingNum
         };
 
+        // render stars
         renderStars(id, ratingNum);
 
+        // update in database
         $.ajax("/api/burgers/rating/" + id, {
             type: "PUT",
             data: burgerData
@@ -77,6 +80,7 @@ $(function () {
         });
     });
 
+    // render stars for all devoured burgers
     function renderAllStars() {
         $.ajax("/api/burgers", {
             type: "GET",
